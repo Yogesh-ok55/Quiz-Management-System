@@ -3,12 +3,12 @@
 #include <string>
 using namespace std;
 
-// Question class
+
 class Question {
 private:
     string questionText;
     vector<string> options;
-    int correctOption; // 1-based index
+    int correctOption; 
 
 public:
     Question() {}
@@ -42,7 +42,7 @@ public:
     }
 };
 
-// Quiz class
+
 class Quiz {
 private:
     vector<Question> questions;
@@ -86,7 +86,7 @@ public:
     }
 };
 
-// User class
+
 class User {
 private:
     string username;
@@ -110,7 +110,7 @@ public:
     }
 };
 
-// Main function
+
 int main() {
     Quiz quiz;
 
@@ -118,13 +118,12 @@ int main() {
     cout << "Enter number of questions you want to add: ";
     cin >> numQuestions;
 
-    // Admin adds questions dynamically
+   
     for (int i = 0; i < numQuestions; i++) {
         cout << "\nAdding Question " << i + 1 << ":" << endl;
         quiz.addQuestion();
     }
 
-    // User part
     string name;
     cout << "\nEnter your name to start the quiz: ";
     cin.ignore();
