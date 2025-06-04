@@ -1,0 +1,14 @@
+ls -al ~/.ssh //to see if already exist
+
+ssh-keygen -t ed25519 -C "your_email@example.com" //to gemnerate and name of token is ed25519
+
+eval "$(ssh-agent -s)" // creating a process which will run in background and check if data can be taken using it
+
+ssh-add ~/.ssh/id_ed25519 // adding this private token to it
+
+cat ~/.ssh/id_ed25519.pub//will display token name here
+
+Go to GitHub → Settings → SSH and GPG keys → New SSH key // add token here
+
+ssh -T git@github.com // test using it , it should how , i your-username! You've successfully authenticated, but GitHub does not provide shell access.
+
